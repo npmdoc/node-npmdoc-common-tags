@@ -1,0 +1,736 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/declandewet/common-tags">common-tags (v1.4.0)</a>
+</h1>
+<h4>a few common utility template tags for ES2015</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.common-tags">module common-tags</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.common-tags.TemplateTag">
+            function <span class="apidocSignatureSpan">common-tags.</span>TemplateTag
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.common-tags.codeBlock">
+            function <span class="apidocSignatureSpan">common-tags.</span>codeBlock
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.common-tags.commaLists">
+            function <span class="apidocSignatureSpan">common-tags.</span>commaLists
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.common-tags.commaListsAnd">
+            function <span class="apidocSignatureSpan">common-tags.</span>commaListsAnd
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.common-tags.commaListsOr">
+            function <span class="apidocSignatureSpan">common-tags.</span>commaListsOr
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.common-tags.html">
+            function <span class="apidocSignatureSpan">common-tags.</span>html
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.common-tags.inlineArrayTransformer">
+            function <span class="apidocSignatureSpan">common-tags.</span>inlineArrayTransformer
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.common-tags.inlineLists">
+            function <span class="apidocSignatureSpan">common-tags.</span>inlineLists
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.common-tags.oneLine">
+            function <span class="apidocSignatureSpan">common-tags.</span>oneLine
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.common-tags.oneLineCommaLists">
+            function <span class="apidocSignatureSpan">common-tags.</span>oneLineCommaLists
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.common-tags.oneLineCommaListsAnd">
+            function <span class="apidocSignatureSpan">common-tags.</span>oneLineCommaListsAnd
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.common-tags.oneLineCommaListsOr">
+            function <span class="apidocSignatureSpan">common-tags.</span>oneLineCommaListsOr
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.common-tags.oneLineInlineLists">
+            function <span class="apidocSignatureSpan">common-tags.</span>oneLineInlineLists
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.common-tags.oneLineTrim">
+            function <span class="apidocSignatureSpan">common-tags.</span>oneLineTrim
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.common-tags.removeNonPrintingValuesTransformer">
+            function <span class="apidocSignatureSpan">common-tags.</span>removeNonPrintingValuesTransformer
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.common-tags.replaceResultTransformer">
+            function <span class="apidocSignatureSpan">common-tags.</span>replaceResultTransformer
+            <span class="apidocSignatureSpan">(replaceWhat, replaceWith)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.common-tags.replaceSubstitutionTransformer">
+            function <span class="apidocSignatureSpan">common-tags.</span>replaceSubstitutionTransformer
+            <span class="apidocSignatureSpan">(replaceWhat, replaceWith)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.common-tags.safeHtml">
+            function <span class="apidocSignatureSpan">common-tags.</span>safeHtml
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.common-tags.source">
+            function <span class="apidocSignatureSpan">common-tags.</span>source
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.common-tags.splitStringTransformer">
+            function <span class="apidocSignatureSpan">common-tags.</span>splitStringTransformer
+            <span class="apidocSignatureSpan">(splitBy)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.common-tags.stripIndent">
+            function <span class="apidocSignatureSpan">common-tags.</span>stripIndent
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.common-tags.stripIndentTransformer">
+            function <span class="apidocSignatureSpan">common-tags.</span>stripIndentTransformer
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.common-tags.stripIndents">
+            function <span class="apidocSignatureSpan">common-tags.</span>stripIndents
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.common-tags.trimResultTransformer">
+            function <span class="apidocSignatureSpan">common-tags.</span>trimResultTransformer
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.common-tags" id="apidoc.module.common-tags">module common-tags</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.common-tags.TemplateTag" id="apidoc.element.common-tags.TemplateTag">
+        function <span class="apidocSignatureSpan">common-tags.</span>TemplateTag
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function TemplateTag() {
+  for (var _len = arguments.length, transformers = Array(_len), _key = 0; _key &lt; _len; _key++) {
+    transformers[_key] = arguments[_key];
+  }
+
+  (0, _classCallCheck3.default)(this, TemplateTag);
+
+  // if first argument is an array, extrude it as a list of transformers
+  if (transformers.length &amp;&amp; Array.isArray(transformers[0])) {
+    transformers = transformers[0];
+  }
+
+  // if any transformers are functions, this means they are not initiated - automatically initiate them
+  this.transformers = transformers.map(function (transformer) {
+    return typeof transformer === 'function' ? transformer() : transformer;
+  });
+
+  // return an ES2015 template tag
+  return this.tag.bind(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.common-tags.codeBlock" id="apidoc.element.common-tags.codeBlock">
+        function <span class="apidocSignatureSpan">common-tags.</span>codeBlock
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">codeBlock = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.common-tags.commaLists" id="apidoc.element.common-tags.commaLists">
+        function <span class="apidocSignatureSpan">common-tags.</span>commaLists
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">commaLists = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.common-tags.commaListsAnd" id="apidoc.element.common-tags.commaListsAnd">
+        function <span class="apidocSignatureSpan">common-tags.</span>commaListsAnd
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">commaListsAnd = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.common-tags.commaListsOr" id="apidoc.element.common-tags.commaListsOr">
+        function <span class="apidocSignatureSpan">common-tags.</span>commaListsOr
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">commaListsOr = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.common-tags.html" id="apidoc.element.common-tags.html">
+        function <span class="apidocSignatureSpan">common-tags.</span>html
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">html = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.common-tags.inlineArrayTransformer" id="apidoc.element.common-tags.inlineArrayTransformer">
+        function <span class="apidocSignatureSpan">common-tags.</span>inlineArrayTransformer
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function inlineArrayTransformer() {
+  var opts = arguments.length &gt; 0 &amp;&amp; arguments[0] !== undefined ? arguments[0] : defaults;
+  return {
+    onSubstitution: function onSubstitution(substitution, resultSoFar) {
+      // only operate on arrays
+      if (Array.isArray(substitution)) {
+        var separator = opts.separator;
+        var conjunction = opts.conjunction;
+        var serial = opts.serial;
+        // join each item in the array into a string where each item is separated by separator
+        // be sure to maintain indentation
+        var indent = resultSoFar.match(/(\s+)$/);
+        if (indent) {
+          substitution = substitution.join(separator + indent[1]);
+        } else {
+          substitution = substitution.join(separator + ' ');
+        }
+        // if conjunction is set, replace the last separator with conjunction
+        if (conjunction) {
+          var separatorIndex = substitution.lastIndexOf(separator);
+          substitution = substitution.substr(0, separatorIndex) + (serial ? separator : '') + ' ' + conjunction + substitution.substr
+(separatorIndex + 1);
+        }
+      }
+      return substitution;
+    }
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.common-tags.inlineLists" id="apidoc.element.common-tags.inlineLists">
+        function <span class="apidocSignatureSpan">common-tags.</span>inlineLists
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">inlineLists = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.common-tags.oneLine" id="apidoc.element.common-tags.oneLine">
+        function <span class="apidocSignatureSpan">common-tags.</span>oneLine
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">oneLine = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.common-tags.oneLineCommaLists" id="apidoc.element.common-tags.oneLineCommaLists">
+        function <span class="apidocSignatureSpan">common-tags.</span>oneLineCommaLists
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">oneLineCommaLists = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.common-tags.oneLineCommaListsAnd" id="apidoc.element.common-tags.oneLineCommaListsAnd">
+        function <span class="apidocSignatureSpan">common-tags.</span>oneLineCommaListsAnd
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">oneLineCommaListsAnd = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.common-tags.oneLineCommaListsOr" id="apidoc.element.common-tags.oneLineCommaListsOr">
+        function <span class="apidocSignatureSpan">common-tags.</span>oneLineCommaListsOr
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">oneLineCommaListsOr = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.common-tags.oneLineInlineLists" id="apidoc.element.common-tags.oneLineInlineLists">
+        function <span class="apidocSignatureSpan">common-tags.</span>oneLineInlineLists
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">oneLineInlineLists = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.common-tags.oneLineTrim" id="apidoc.element.common-tags.oneLineTrim">
+        function <span class="apidocSignatureSpan">common-tags.</span>oneLineTrim
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">oneLineTrim = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.common-tags.removeNonPrintingValuesTransformer" id="apidoc.element.common-tags.removeNonPrintingValuesTransformer">
+        function <span class="apidocSignatureSpan">common-tags.</span>removeNonPrintingValuesTransformer
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function removeNonPrintingValuesTransformer() {
+  return {
+    onSubstitution: function onSubstitution(substitution) {
+      if (Array.isArray(substitution)) {
+        return substitution.filter(isValidValue);
+      }
+      if (isValidValue(substitution)) {
+        return substitution;
+      }
+      return '';
+    }
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.common-tags.replaceResultTransformer" id="apidoc.element.common-tags.replaceResultTransformer">
+        function <span class="apidocSignatureSpan">common-tags.</span>replaceResultTransformer
+        <span class="apidocSignatureSpan">(replaceWhat, replaceWith)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function replaceResultTransformer(replaceWhat, replaceWith) {
+  return {
+    onEndResult: function onEndResult(endResult) {
+      if (replaceWhat == null || replaceWith == null) {
+        throw new Error('replaceResultTransformer requires at least 2 arguments.');
+      }
+      return endResult.replace(replaceWhat, replaceWith);
+    }
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.common-tags.replaceSubstitutionTransformer" id="apidoc.element.common-tags.replaceSubstitutionTransformer">
+        function <span class="apidocSignatureSpan">common-tags.</span>replaceSubstitutionTransformer
+        <span class="apidocSignatureSpan">(replaceWhat, replaceWith)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function replaceSubstitutionTransformer(replaceWhat, replaceWith) {
+  return {
+    onSubstitution: function onSubstitution(substitution, resultSoFar) {
+      if (replaceWhat == null || replaceWith == null) {
+        throw new Error('replaceSubstitutionTransformer requires at least 2 arguments.');
+      }
+
+      // Do not touch if null or undefined
+      if (substitution == null) {
+        return substitution;
+      } else {
+        return substitution.toString().replace(replaceWhat, replaceWith);
+      }
+    }
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.common-tags.safeHtml" id="apidoc.element.common-tags.safeHtml">
+        function <span class="apidocSignatureSpan">common-tags.</span>safeHtml
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">safeHtml = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.common-tags.source" id="apidoc.element.common-tags.source">
+        function <span class="apidocSignatureSpan">common-tags.</span>source
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">source = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.common-tags.splitStringTransformer" id="apidoc.element.common-tags.splitStringTransformer">
+        function <span class="apidocSignatureSpan">common-tags.</span>splitStringTransformer
+        <span class="apidocSignatureSpan">(splitBy)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function splitStringTransformer(splitBy) {
+  return {
+    onSubstitution: function onSubstitution(substitution, resultSoFar) {
+      if (splitBy != null &amp;&amp; typeof splitBy === 'string') {
+        if (typeof substitution === 'string' &amp;&amp; substitution.includes(splitBy)) {
+          substitution = substitution.split(splitBy);
+        }
+      } else {
+        throw new Error('You need to specify a string character to split by.');
+      }
+      return substitution;
+    }
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.common-tags.stripIndent" id="apidoc.element.common-tags.stripIndent">
+        function <span class="apidocSignatureSpan">common-tags.</span>stripIndent
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stripIndent = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.common-tags.stripIndentTransformer" id="apidoc.element.common-tags.stripIndentTransformer">
+        function <span class="apidocSignatureSpan">common-tags.</span>stripIndentTransformer
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function stripIndentTransformer() {
+  var type = arguments.length &gt; 0 &amp;&amp; arguments[0] !== undefined ? arguments[0] : 'initial';
+  return {
+    onEndResult: function onEndResult(endResult) {
+      if (type === 'initial') {
+        // remove the shortest leading indentation from each line
+        var match = endResult.match(/^[ \t]*(?=\S)/gm);
+        // return early if there's nothing to strip
+        if (match === null) {
+          return endResult;
+        }
+        var indent = Math.min.apply(Math, (0, _toConsumableArray3.default)(match.map(function (el) {
+          return el.length;
+        })));
+        var regexp = new RegExp('^[ \\t]{' + indent + '}', 'gm');
+        endResult = indent &gt; 0 ? endResult.replace(regexp, '') : endResult;
+      } else if (type === 'all') {
+        // remove all indentation from each line
+        endResult = endResult.split('\n').map(function (line) {
+          return line.trimLeft();
+        }).join('\n');
+      } else {
+        throw new Error('Unknown type: ' + type);
+      }
+      return endResult;
+    }
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.common-tags.stripIndents" id="apidoc.element.common-tags.stripIndents">
+        function <span class="apidocSignatureSpan">common-tags.</span>stripIndents
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stripIndents = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.common-tags.trimResultTransformer" id="apidoc.element.common-tags.trimResultTransformer">
+        function <span class="apidocSignatureSpan">common-tags.</span>trimResultTransformer
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function trimResultTransformer() {
+  var side = arguments.length &gt; 0 &amp;&amp; arguments[0] !== undefined ? arguments[0] : '';
+  return {
+    onEndResult: function onEndResult(endResult) {
+      side = side.toLowerCase();
+      // uppercase the first letter of side value
+      if (side === 'left' || side === 'right') {
+        side = side.charAt(0).toUpperCase() + side.slice(1);
+      } else if (side !== '') {
+        throw new Error('Side not supported: ' + side);
+      }
+      return endResult['trim' + side]();
+    }
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
